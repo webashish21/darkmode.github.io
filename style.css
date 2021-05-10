@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+section{
+    position: relative;
+    background-color: #f0f8ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background .5s;
+}
+section.dark{
+    background-color: #222831;
+}
+/* .imgBx img{
+    width: 300px;
+    height: 300px;
+} */
+
+section .card {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background-color: #fff;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.025);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background .5s;
+}
+section.dark .card{
+    background-color: #393e46;
+}
+section .card .content, section .card .imgText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+section .card .imgText .imgBx{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    top: -18px;
+}
+section .card .imgText .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .card .imgText h3{
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 20px;
+    text-align: center;
+    color: #2fa1ff;
+}
+
+section .card .imgText h3 span{
+    font-weight: 400;
+    font-size: .90rem;
+    color: #777;
+}
+section.dark .card .imgText h3 span{
+    color: #aaaaaa;
+}
+section .card .sci{
+    display: flex;
+    margin-top: 15px;
+}
+section .card .sci li a{ 
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #e9f5ff;
+    color: #2fa1ff;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+section.dark .card .sci li a{
+    background-color: #404852;
+
+}
+section .card .sci li a:hover{ 
+    color: #fff;
+
+}
+
+section .card .sci li a .fab{ 
+    position: relative;
+    z-index: 1000;
+}
+section .card .sci li a::before{ 
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2fa1ff;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+section .card .sci li a:hover::before{ 
+    transform: scale(1);
+}
+
+.toggle{
+    position: absolute;
+    float: left;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    background-color: #e9f5ff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+section.dark .toggle{
+    background-color: #404852;
+
+}
+.toggle::before{
+    content: '\f186';
+    font-family: fontAwesome;
+    color: #2fa1ff;
+}
+section .dark .toggle:before{
+    content: '\f185';
+}
+section.dark .toggle:before{
+    color: #fff;
+}
+
+
